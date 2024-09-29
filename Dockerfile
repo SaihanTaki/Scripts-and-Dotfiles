@@ -22,3 +22,5 @@ WORKDIR /code
 COPY dockershell.sh ./
 RUN chmod +x dockershell.sh && ./dockershell.sh
 
+ENV TZ=Asia/Dhaka
+
