@@ -12,7 +12,9 @@ RUN apt-get update && apt upgrade -y \
     curl \
     wget \
     make \
+    cron \
     tmux \
+    micro \
     python3-venv \
     software-properties-common \
     && add-apt-repository ppa:zhangsongcui3371/fastfetch \

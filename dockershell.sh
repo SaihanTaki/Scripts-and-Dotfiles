@@ -37,11 +37,11 @@ source $HOME/.oh-my-zsh/oh-my-zsh.sh
 # User configuration
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git svn
-zstyle ':vcs_info:git:*' formats '%b '
+zstyle ':vcs_info:git:*' formats '(%b) '
 precmd() { vcs_info }
 
 setopt PROMPT_SUBST
-PROMPT="%F{cyan}%n%f@%F{cyan}%m%f %F{blue}%2~%f %F{red}(${vcs_info_msg_0_})%f$ "
+PROMPT="%F{cyan}%n%f@%F{cyan}%m%f %F{blue}%2~%f %F{red}${vcs_info_msg_0_}%f$ "
 RPROMPT="%F{red}%t %w"
 
 EOL
