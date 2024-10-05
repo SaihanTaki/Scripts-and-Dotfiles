@@ -34,17 +34,17 @@ HIST_STAMPS="dd.mm.yyyy"
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-autocomplete)
 source $HOME/.oh-my-zsh/oh-my-zsh.sh
 
-# User configuration
-autoload -Uz vcs_info
-zstyle ':vcs_info:*' enable git svn
-zstyle ':vcs_info:git:*' formats '(%b) '
-precmd() { vcs_info }
+# #User configuration
+# autoload -Uz vcs_info
+# zstyle ':vcs_info:*' enable git svn
+# zstyle ':vcs_info:git:*' formats '(%b) '
+# precmd() { vcs_info }
 
 setopt PROMPT_SUBST
-PROMPT="%F{cyan}%n%f@%F{cyan}%m%f %F{blue}%2~%f %F{red}${vcs_info_msg_0_}%f$ "
-RPROMPT="%F{red}%t %w"
+# PROMPT="%F{cyan}%n%f@%F{cyan}%m%f %F{blue}%2~%f %F{red}${vcs_info_msg_0_}%f$ "
+# RPROMPT="%F{red}%t %w"
 
-#https://github.com/ohmyzsh/ohmyzsh/blob/master/themes/robbyrussell.zsh-theme
+# #https://github.com/ohmyzsh/ohmyzsh/blob/master/themes/robbyrussell.zsh-theme
 
 # PROMPT="%(?:%{$fg_bold[green]%}%1{➜%} :%{$fg_bold[red]%}%1{➜%} ) %{$fg[cyan]%}%c%{$reset_color%}"
 # PROMPT+=" $(git_prompt_info)"
