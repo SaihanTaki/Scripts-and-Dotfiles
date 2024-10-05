@@ -18,11 +18,17 @@ RUN apt-get update && apt upgrade -y \
     python3-venv \
     software-properties-common \
     && add-apt-repository ppa:zhangsongcui3371/fastfetch \
-    && apt-get install fastfetch
+    && apt-get install fastfetch -y \
+    && add-apt-repository ppa:deadsnakes/ppa \
+    && apt-get install python3.9 -y
+    
+
 
 WORKDIR /code
 COPY dockershell.sh ./
 RUN chmod +x dockershell.sh && ./dockershell.sh
 
 ENV TZ=Asia/Dhaka
+
+CMD [ "/bin/zsh" ]
 
