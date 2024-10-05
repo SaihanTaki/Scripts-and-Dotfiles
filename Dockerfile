@@ -20,7 +20,8 @@ RUN apt-get update && apt upgrade -y \
     && add-apt-repository ppa:zhangsongcui3371/fastfetch \
     && apt-get install fastfetch -y \
     && add-apt-repository ppa:deadsnakes/ppa \
-    && apt-get install python3.9 -y
+    && apt-get install python3.10 -y \
+    && apt-get install python3.10-venv -y
     
 
 
