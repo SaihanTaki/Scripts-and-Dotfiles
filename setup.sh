@@ -58,6 +58,11 @@ EOL
 # End of zsh configs
 
 
+echo -e "${FG}${BOLD} Configuring tmux......${RESET}"
+echo "set-option -g default-shell /bin/zsh" >> ~/.tmux.conf
+echo "set-option -g status-style 'bg=cyan,fg=black'" >> ~/.tmux.conf
+
+
 echo -e "${FG}${BOLD} Installing Docker.....${RESET}"
 # Add Docker's official GPG key:
 apt install ca-certificates -y
